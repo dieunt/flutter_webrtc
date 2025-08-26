@@ -122,11 +122,11 @@ class _GetUserMediaSampleState extends State<GetUserMediaSample> {
         .getVideoTracks()
         .firstWhere((track) => track.kind == 'video');
 
-    await _mediaRecorder!.start(
-      _mediaRecorderFilePath!,
-      videoTrack: videoTrack,
-      audioChannel: RecorderAudioChannel.OUTPUT,
-    );
+    // await _mediaRecorder!.start(
+    //   _mediaRecorderFilePath!,
+    //   videoTrack: videoTrack,
+    //   audioChannel: RecorderAudioChannel.OUTPUT,
+    // );
   }
 
   void _stopRecording() async {
@@ -178,22 +178,22 @@ class _GetUserMediaSampleState extends State<GetUserMediaSample> {
   void _captureFrame() async {
     if (_localStream == null) throw Exception('Stream is not initialized');
 
-    final videoTrack = _localStream!
-        .getVideoTracks()
-        .firstWhere((track) => track.kind == 'video');
-    final frame = await videoTrack.captureFrame();
-    await showDialog(
-        context: context,
-        builder: (context) => AlertDialog(
-              content:
-                  Image.memory(frame.asUint8List(), height: 720, width: 1280),
-              actions: <Widget>[
-                TextButton(
-                  onPressed: Navigator.of(context, rootNavigator: true).pop,
-                  child: Text('OK'),
-                )
-              ],
-            ));
+    // final videoTrack = _localStream!
+    //     .getVideoTracks()
+    //     .firstWhere((track) => track.kind == 'video');
+    // final frame = await videoTrack.captureFrame();
+    // await showDialog(
+    //     context: context,
+    //     builder: (context) => AlertDialog(
+    //           content:
+    //               Image.memory(frame.asUint8List(), height: 720, width: 1280),
+    //           actions: <Widget>[
+    //             TextButton(
+    //               onPressed: Navigator.of(context, rootNavigator: true).pop,
+    //               child: Text('OK'),
+    //             )
+    //           ],
+    //         ));
   }
 
   @override
