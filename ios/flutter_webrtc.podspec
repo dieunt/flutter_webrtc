@@ -18,5 +18,15 @@ A new flutter plugin project.
   s.dependency 'Libyuv', '1703'
   s.ios.deployment_target = '10.0'
   s.static_framework = true
-  # s.vendored_frameworks = 'WebRTC.xcframework'
+  # Download the xcframework if missing
+  s.prepare_command = <<-CMD
+    set -euo pipefail
+    if [ ! -d "WebRTC.xcframework" ]; then
+      echo "Downloading WebRTC.xcframework..."
+      curl -L --fail -o WebRTC.xcframework.zip "https://ss.zetaby.com/hanet-firmware/WebRTC.xcframework.zip"
+      unzip -q WebRTC.xcframework.zip
+      rm -f WebRTC.xcframework.zip
+    fi
+  CMD
+  s.vendored_frameworks = 'WebRTC.xcframework'
 end
