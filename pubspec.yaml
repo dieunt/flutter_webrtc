@@ -28,7 +28,7 @@ flutter:
         package: com.hanet.flutter_webrtc
         pluginClass: FlutterWebRTCPlugin
       ios:
-        pluginClass: FlutterWebRTCPlugin
+        pluginClass: FlutterWebrtcPlugin
       macos:
         pluginClass: FlutterWebRTCPlugin
       windows:
