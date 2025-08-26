@@ -18,5 +18,5 @@ A new flutter plugin project.
   s.dependency 'Libyuv', '1703'
   s.ios.deployment_target = '10.0'
   s.static_framework = true
-  s.vendored_frameworks = 'WebRTC.xcframework'
+  # s.vendored_frameworks = 'WebRTC.xcframework'
 end
