@@ -1,4 +1,4 @@
-group 'com.hanet.flutter_webrtc'
+group 'com.rhrtc.flutter_webrtc'
 version '1.0-SNAPSHOT'
 
 buildscript {

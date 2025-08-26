@@ -130,7 +130,7 @@ class RTCVideoRenderer extends ValueNotifier<RTCVideoValue>
 
   @override
   Future<bool> audioOutput(String deviceId) {
-    // TODO(hanet): related to https://github.com/flutter-webrtc/flutter-webrtc/issues/395
+    // TODO(rhrtc): related to https://github.com/flutter-webrtc/flutter-webrtc/issues/395
     throw UnimplementedError('This is not implement yet');
   }
 }

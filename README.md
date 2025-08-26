@@ -24,16 +24,15 @@ Enterprise Grade APIs for Feeds & Chat. <a href="https://getstream.io/chat/flutt
 <p>
 ## Functionality
 
-|      Feature       |      Android       |        iOS         | [Web](https://flutter.dev/web) |       macOS        |      Windows       | Linux | [Embedded](https://github.com/sony/flutter-elinux) | [Fuchsia](https://fuchsia.dev/) |
-| :----------------: | :----------------: | :----------------: | :----------------------------: | :----------------: | :----------------: | :---: | :------------------------------------------------: | :-----------------------------: |
-|    Audio/Video     | :heavy_check_mark: | :heavy_check_mark: |       :heavy_check_mark:       | :heavy_check_mark: | :heavy_check_mark: | [WIP] |                       [WIP]                        |                                 |
-|    Data Channel    | :heavy_check_mark: | :heavy_check_mark: |       :heavy_check_mark:       | :heavy_check_mark: | :heavy_check_mark: | [WIP] |                       [WIP]                        |                                 |
-|   Screen Capture   | :heavy_check_mark: | :heavy_check_mark: |       :heavy_check_mark:       |                    |                    |       |                                                    |                                 |
-|    Unified-Plan    | :heavy_check_mark: | :heavy_check_mark: |       :heavy_check_mark:       | :heavy_check_mark: | :heavy_check_mark: | [WIP] |                       [WIP]                        |                                 |
-|     Simulcast      | :heavy_check_mark: | :heavy_check_mark: |       :heavy_check_mark:       | :heavy_check_mark: |       [WIP]        |       |                                                    |                                 |
-|   MediaRecorder    |     :warning:      |     :warning:      |       :heavy_check_mark:       |                    |                    |       |                                                    |                                 |
-| Insertable Streams |                    |                    |                                |                    |                    |       |                                                    |                                 |
-
+| Feature | Android | iOS | [Web](https://flutter.dev/web) | macOS | Windows | Linux | [Embedded](https://github.com/sony/flutter-elinux) | [Fuchsia](https://fuchsia.dev/) |
+| :-------------: | :-------------:| :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: |
+| Audio/Video | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | [WIP] | [WIP] | |
+| Data Channel | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | [WIP] |  [WIP] ||
+| Screen Capture | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | | | | | |
+| Unified-Plan | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | [WIP] | [WIP] | |
+| Simulcast | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | [WIP] | | | |
+| MediaRecorder | :warning: | :warning: | :heavy_check_mark: | | | | | |
+| Insertable Streams | | | | | | | | |
 ## Usage
 
 Add `flutter_webrtc` as a [dependency in your pubspec.yaml file](https://flutter.io/using-packages/).
@@ -90,7 +89,6 @@ android {
 If necessary, in the same `build.gradle` you will need to increase `minSdkVersion` of `defaultConfig` up to `23` (currently default Flutter generator set it to `16`).
 
 ### Important reminder
-
 When you compile the release apk, you need to add the following operations,
 [Setup Proguard Rules](https://github.com/flutter-webrtc/flutter-webrtc/commit/d32dab13b5a0bed80dd9d0f98990f107b9b514f4)
 
@@ -98,18 +96,19 @@ When you compile the release apk, you need to add the following operations,
 
 The project is inseparable from the contributors of the community.
 
--   [hanet](https://github.com/hanet) - Original Author
+- [rhrtc](https://github.com/rhrtc) - Original Author
+
 
 ### Example
 
-For more examples, please refer to [flutter-webrtc-demo](https://github.com/hanet/flutter-webrtc-demo/).
+For more examples, please refer to [flutter-webrtc-demo](https://github.com/rhrtc/flutter-webrtc-demo/).
 
 ## Contributors
 
 ### Code Contributors
 
 This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
-<a href="https://github.com/hanet/flutter-webrtc/graphs/contributors"><img src="https://opencollective.com/flutter-webrtc/contributors.svg?width=890&button=false" /></a>
+<a href="https://github.com/rhrtc/flutter-webrtc/graphs/contributors"><img src="https://opencollective.com/flutter-webrtc/contributors.svg?width=890&button=false" /></a>
 
 ### Financial Contributors
 

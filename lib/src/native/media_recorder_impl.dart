@@ -15,7 +15,7 @@ class MediaRecorderNative extends MediaRecorder {
   @override
   Future<void> start(int mode,String path,String peerConnectionId,
       {MediaStreamTrack? videoTrack,MediaStreamTrack? audioTrack, RecorderAudioChannel? audioChannel
-      // TODO(hanet): add codec/quality options
+      // TODO(rhrtc): add codec/quality options
       }) async {
     if (audioChannel == null && videoTrack == null) {
       throw Exception('Neither audio nor video track were provided');

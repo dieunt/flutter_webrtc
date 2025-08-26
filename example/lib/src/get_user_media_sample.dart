@@ -51,7 +51,8 @@ class _GetUserMediaSampleState extends State<GetUserMediaSample> {
       'audio': false,
       'video': {
         'mandatory': {
-          'minWidth': '640', // Provide your own width, height and frame rate here
+          'minWidth':
+              '640', // Provide your own width, height and frame rate here
           'minHeight': '480',
           'minFrameRate': '30',
         },
@@ -117,13 +118,15 @@ class _GetUserMediaSampleState extends State<GetUserMediaSample> {
     _mediaRecorder = MediaRecorder();
     setState(() {});
 
-    final videoTrack = _localStream!.getVideoTracks().firstWhere((track) => track.kind == 'video');
+    final videoTrack = _localStream!
+        .getVideoTracks()
+        .firstWhere((track) => track.kind == 'video');
 
-    // await _mediaRecorder!.start(
-    //   _mediaRecorderFilePath!,
-    //   videoTrack: videoTrack,
-    //   audioChannel: RecorderAudioChannel.OUTPUT,
-    // );
+    await _mediaRecorder!.start(
+      _mediaRecorderFilePath!,
+      videoTrack: videoTrack,
+      audioChannel: RecorderAudioChannel.OUTPUT,
+    );
   }
 
   void _stopRecording() async {
@@ -149,7 +152,9 @@ class _GetUserMediaSampleState extends State<GetUserMediaSample> {
   void _toggleTorch() async {
     if (_localStream == null) throw Exception('Stream is not initialized');
 
-    final videoTrack = _localStream!.getVideoTracks().firstWhere((track) => track.kind == 'video');
+    final videoTrack = _localStream!
+        .getVideoTracks()
+        .firstWhere((track) => track.kind == 'video');
     final has = await videoTrack.hasTorch();
     if (has) {
       print('[TORCH] Current camera supports torch mode');
@@ -164,27 +169,31 @@ class _GetUserMediaSampleState extends State<GetUserMediaSample> {
   void _toggleCamera() async {
     if (_localStream == null) throw Exception('Stream is not initialized');
 
-    final videoTrack = _localStream!.getVideoTracks().firstWhere((track) => track.kind == 'video');
+    final videoTrack = _localStream!
+        .getVideoTracks()
+        .firstWhere((track) => track.kind == 'video');
     await Helper.switchCamera(videoTrack);
   }
 
   void _captureFrame() async {
     if (_localStream == null) throw Exception('Stream is not initialized');
 
-    final videoTrack = _localStream!.getVideoTracks().firstWhere((track) => track.kind == 'video');
-    // final frame = await videoTrack.captureFrame();
-    // await showDialog(
-    //     context: context,
-    //     builder: (context) => AlertDialog(
-    //           content:
-    //               Image.memory(frame.asUint8List(), height: 720, width: 1280),
-    //           actions: <Widget>[
-    //             TextButton(
-    //               onPressed: Navigator.of(context, rootNavigator: true).pop,
-    //               child: Text('OK'),
-    //             )
-    //           ],
-    //         ));
+    final videoTrack = _localStream!
+        .getVideoTracks()
+        .firstWhere((track) => track.kind == 'video');
+    final frame = await videoTrack.captureFrame();
+    await showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+              content:
+                  Image.memory(frame.asUint8List(), height: 720, width: 1280),
+              actions: <Widget>[
+                TextButton(
+                  onPressed: Navigator.of(context, rootNavigator: true).pop,
+                  child: Text('OK'),
+                )
+              ],
+            ));
   }
 
   @override

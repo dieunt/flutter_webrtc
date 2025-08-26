@@ -97,12 +97,12 @@ class MediaStreamNative extends MediaStream {
   }
 
   @override
-  // TODO(hanet): Implement
+  // TODO(rhrtc): Implement
   bool get active => throw UnimplementedError();
 
   @override
   MediaStream clone() {
-    // TODO(hanet): Implement
+    // TODO(rhrtc): Implement
     throw UnimplementedError();
   }
 }

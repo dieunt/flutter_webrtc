@@ -1,7 +1,7 @@
 #!/bin/bash
 
 FLUTTER_APP_FOLDER=$(cd `dirname $0`/../; pwd)
-FLUTTER_APP_ORG=com.hanet.flutter-flutter-example
+FLUTTER_APP_ORG=com.rhrtc.flutter-flutter-example
 FLUTTER_APP_PROJECT_NAME=flutter_webrtc_example
 CMD=$1
 
