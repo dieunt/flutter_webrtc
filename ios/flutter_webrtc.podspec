@@ -16,9 +16,8 @@ A new flutter plugin project.
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
   # s.dependency 'Libyuv', '1703'
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '13.0'
   s.static_framework = true
-  # Download the xcframework if missing
   s.prepare_command = <<-CMD
     set -euo pipefail
     if [ ! -d "WebRTC.xcframework" ]; then
@@ -28,5 +27,6 @@ A new flutter plugin project.
       rm -f WebRTC.xcframework.zip
     fi
   CMD
-  s.vendored_frameworks = 'WebRTC.xcframework'
+  s.vendored_frameworks = 'Libyuv.xcframework', 'WebRTC.xcframework'
+  s.preserve_paths      = 'Libyuv.xcframework', 'WebRTC.xcframework'
 end
