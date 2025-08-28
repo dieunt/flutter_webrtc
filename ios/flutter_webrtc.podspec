@@ -28,5 +28,11 @@ A new flutter plugin project.
     fi
   CMD
   s.vendored_frameworks = 'Libyuv.xcframework', 'WebRTC.xcframework'
-  s.preserve_paths      = 'Libyuv.xcframework', 'WebRTC.xcframework'
+  s.preserve_paths      = 'Libyuv.xcframework'
+  s.pod_target_xcconfig = {
+    'OTHER_LDFLAGS' => %q[
+      -Wl,-force_load,"${PODS_TARGET_SRCROOT}/Libyuv.xcframework/ios-arm64/libyuv.a"
+      -Wl,-force_load,"${PODS_TARGET_SRCROOT}/Libyuv.xcframework/ios-arm64_x86_64-simulator/libyuv.a"
+    ]
+  }
 end
